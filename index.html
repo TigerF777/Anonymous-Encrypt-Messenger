@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Freedom Messenger</title>
+  <title data-i18n="title">Freedom Messenger</title>
   <link rel="manifest" href="/manifest.json" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <style>
@@ -13,7 +13,6 @@
       --accent: #00ffa2;
       --gray: #8b949e;
     }
-
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
@@ -21,42 +20,34 @@
       color: var(--fg);
       line-height: 1.6;
     }
-
     header {
       text-align: center;
       padding: 3rem 1rem 1rem;
     }
-
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
-
     header h2 {
       font-weight: 400;
       color: var(--gray);
     }
-
     section {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-
     h3 {
       color: var(--accent);
       margin-top: 2rem;
     }
-
     ul {
       padding-left: 1.5rem;
     }
-
     .highlight {
       color: var(--accent);
       font-weight: bold;
     }
-
     .install-button {
       display: inline-block;
       margin-top: 2rem;
@@ -71,11 +62,9 @@
       text-decoration: none;
       margin-right: 1rem;
     }
-
     .install-button:hover {
       background-color: #00e68c;
     }
-
     .qr-container {
       display: flex;
       justify-content: center;
@@ -84,19 +73,16 @@
       margin-top: 3rem;
       flex-wrap: wrap;
     }
-
     .qr-wrapper {
       position: relative;
       width: 180px;
       height: 180px;
     }
-
     .qr-wrapper img {
       width: 100%;
       height: 100%;
       border-radius: 12px;
     }
-
     .qr-button {
       position: absolute;
       top: 50%;
@@ -115,11 +101,9 @@
       pointer-events: auto;
       transition: background-color 0.3s ease;
     }
-
     .qr-button:hover {
       background-color: rgba(0, 255, 162, 1);
     }
-
     .qr-button svg {
       width: 24px;
       height: 24px;
@@ -129,59 +113,316 @@
 </head>
 <body>
   <header>
-    <h1>🛡 Freedom Messenger</h1>
-    <h2>No surveillance. No spam. No control.</h2>
+    <h1 data-i18n="title">🛡 Freedom Messenger</h1>
+    <h2 data-i18n="subtitle">No surveillance. No spam. No control.</h2>
   </header>
 
   <section>
-    <p>Created for those who value freedom of communication and privacy. No spam, no phone number link, no external access to your messages. Just you and your contact.</p>
+    <p data-i18n="intro">Created for those who value freedom of communication and privacy. No spam, no phone number link, no external access to your messages. Just you and your contact.</p>
 
-    <h3>⚙ Features:</h3>
+    <h3 data-i18n="featuresTitle">⚙ Features:</h3>
     <ul>
-      <li><span class="highlight">AES encryption</span> on the client side (CryptoJS), without key transmission</li>
-      <li>End-to-end encryption for all data: messages, calls, media, files</li>
-      <li>Voice calls with <span class="highlight">real-time audio filters</span>, each user’s filter is unique and heard by their contacts</li>
-      <li>Message replies, quotes, and deletion of individual messages and entire chats (including deleting from contact’s device)</li>
-      <li>File sending up to <span class="highlight">10 GB</span> without compression</li>
-      <li>Swipes on mobile: reply (right swipe), delete (left swipe) for messages; rename (right swipe), delete (left swipe) for chats</li>
-      <li>Context menu support on desktop (right-click)</li>
-      <li>Fullscreen viewing of images, GIFs, videos, and avatars</li>
-      <li>Link previews</li>
-      <li>"Typing" animation styled like the Matrix</li>
-      <li>Works as a PWA and supports Telegram WebView and mobile browsers</li>
-      <li>Crypto wallet integration (not limited to MetaMask), with easy adding and fast switching</li>
-      <li>Symmetric AES encryption key derived uniquely per chat ID — encryption and decryption happen client-side only</li>
-      <li>Server stores only encrypted data, never access to keys or plaintext</li>
+      <li><span class="highlight">AES encryption</span> <span data-i18n="feature1">on the client side (CryptoJS), without key transmission</span></li>
+      <li data-i18n="feature2">End-to-end encryption for all data: messages, calls, media, files</li>
+      <li data-i18n="feature3">Voice calls with <span class="highlight">real-time audio filters</span>, each user’s filter is unique and heard by their contacts</li>
+      <li data-i18n="feature4">Message replies, quotes, and deletion of individual messages and entire chats (including deleting from contact’s device)</li>
+      <li data-i18n="feature5">File sending up to <span class="highlight">10 GB</span> without compression</li>
+      <li data-i18n="feature6">Swipes on mobile: reply (right swipe), delete (left swipe) for messages; rename (right swipe), delete (left swipe) for chats</li>
+      <li data-i18n="feature7">Context menu support on desktop (right-click)</li>
+      <li data-i18n="feature8">Fullscreen viewing of images, GIFs, videos, and avatars</li>
+      <li data-i18n="feature9">Link previews</li>
+      <li data-i18n="feature10">"Typing" animation styled like the Matrix</li>
+      <li data-i18n="feature11">Works as a PWA and supports Telegram WebView and mobile browsers</li>
+      <li data-i18n="feature12">Crypto wallet integration (not limited to MetaMask), with easy adding and fast switching</li>
+      <li data-i18n="feature13">Symmetric AES encryption key derived uniquely per chat ID — encryption and decryption happen client-side only</li>
+      <li data-i18n="feature14">Server stores only encrypted data, never access to keys or plaintext</li>
     </ul>
 
-    <h3>🧭 How to Start:</h3>
+    <h3 data-i18n="startTitle">🧭 How to Start:</h3>
     <ul>
-      <li>Create your unique user ID</li>
-      <li>Add your contact's ID and start chatting securely</li>
-      <li>Enjoy encrypted calls, personalized voice filters, and large file sharing</li>
+      <li data-i18n="start1">Create your unique user ID</li>
+      <li data-i18n="start2">Add your contact's ID and start chatting securely</li>
+      <li data-i18n="start3">Enjoy encrypted calls, personalized voice filters, and large file sharing</li>
     </ul>
 
-    <h3>🧠 Philosophy:</h3>
-    <p><em>No middlemen. Just you, your contact, and a secure channel. No tracking, no junk. Absolute privacy and freedom of communication.</em></p>
+    <h3 data-i18n="philosophyTitle">🧠 Philosophy:</h3>
+    <p data-i18n="philosophy"><em>No middlemen. Just you, your contact, and a secure channel. No tracking, no junk. Absolute privacy and freedom of communication.</em></p>
 
     <div class="qr-container">
       <div class="qr-wrapper">
         <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://crazyencrypt-f7c5f.web.app/&size=180x180" alt="App QR">
         <a href="https://crazyencrypt-f7c5f.web.app/" target="_blank" class="qr-button" title="Install App">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path fill="#000" d="M17 1H7C5.9 1 5 1.9 5 3v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14z"/>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000" d="M17 1H7C5.9 1 5 1.9 5 3v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14z"/></svg>
         </a>
       </div>
       <div class="qr-wrapper">
         <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://t.me/+BEFenwaKJl0zMTIy&size=180x180" alt="Telegram QR">
         <a href="https://t.me/+BEFenwaKJl0zMTIy" target="_blank" class="qr-button" title="Join Telegram">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path fill="#000" d="M12 0C5.375 0 0 5.373 0 12c0 6.627 5.375 12 12 12s12-5.373 12-12c0-6.627-5.375-12-12-12zm5.586 7.926l-1.949 9.193c-.147.662-.532.822-1.079.511l-2.984-2.201-1.438 1.385c-.159.16-.292.292-.596.292l.213-3.031 5.523-4.984c.24-.213-.053-.332-.373-.119l-6.823 4.293-2.937-.917c-.638-.2-.651-.638.133-.942l11.48-4.424c.534-.2 1.002.119.829.931z"/>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000" d="M12 0C5.375 0 0 5.373 0 12c0 6.627 5.375 12 12 12s12-5.373 12-12c0-6.627-5.375-12-12-12zm5.586 7.926l-1.949 9.193c-.147.662-.532.822-1.079.511l-2.984-2.201-1.438 1.385c-.159.16-.292.292-.596.292l.213-3.031 5.523-4.984c.24-.213-.053-.332-.373-.119l-6.823 4.293-2.937-.917c-.638-.2-.651-.638.133-.942l11.48-4.424c.534-.2 1.002.119.829.931z"/></svg>
         </a>
       </div>
     </div>
   </section>
+
+  <script>
+    const translations = {
+      en: {
+        title: "🛡 Freedom Messenger",
+        subtitle: "No surveillance. No spam. No control.",
+        intro: "Created for those who value freedom of communication and privacy. No spam, no phone number link, no external access to your messages. Just you and your contact.",
+        featuresTitle: "⚙ Features:",
+        feature1: "on the client side (CryptoJS), without key transmission",
+        feature2: "End-to-end encryption for all data: messages, calls, media, files",
+        feature3: "Voice calls with real-time audio filters, each user’s filter is unique and heard by their contacts",
+        feature4: "Message replies, quotes, and deletion of individual messages and entire chats (including deleting from contact’s device)",
+        feature5: "File sending up to 10 GB without compression",
+        feature6: "Swipes on mobile: reply (right swipe), delete (left swipe) for messages; rename (right swipe), delete (left swipe) for chats",
+        feature7: "Context menu support on desktop (right-click)",
+        feature8: "Fullscreen viewing of images, GIFs, videos, and avatars",
+        feature9: "Link previews",
+        feature10: "\"Typing\" animation styled like the Matrix",
+        feature11: "Works as a PWA and supports Telegram WebView and mobile browsers",
+        feature12: "Crypto wallet integration (not limited to MetaMask), with easy adding and fast switching",
+        feature13: "Symmetric AES encryption key derived uniquely per chat ID — encryption and decryption happen client-side only",
+        feature14: "Server stores only encrypted data, never access to keys or plaintext",
+        startTitle: "🧭 How to Start:",
+        start1: "Create your unique user ID",
+        start2: "Add your contact's ID and start chatting securely",
+        start3: "Enjoy encrypted calls, personalized voice filters, and large file sharing",
+        philosophyTitle: "🧠 Philosophy:",
+        philosophy: "No middlemen. Just you, your contact, and a secure channel. No tracking, no junk. Absolute privacy and freedom of communication."
+      },
+      ru: {
+        title: "🛡 Мессенджер Свободы",
+        subtitle: "Без слежки. Без спама. Без контроля.",
+        intro: "Создан для тех, кто ценит свободу общения и конфиденциальность. Без спама, без привязки к номеру, без доступа к вашим сообщениям.",
+        featuresTitle: "⚙ Возможности:",
+        feature1: "на стороне клиента (CryptoJS), без передачи ключей",
+        feature2: "Конечное шифрование всех данных: сообщений, звонков, медиа, файлов",
+        feature3: "Голосовые звонки с уникальными аудиофильтрами в реальном времени для каждого пользователя",
+        feature4: "Ответы, цитаты и удаление отдельных сообщений или чатов (в том числе с устройства собеседника)",
+        feature5: "Передача файлов до 10 ГБ без сжатия",
+        feature6: "Свайпы на телефоне: ответ (вправо), удалить (влево); для чатов: переименовать (вправо), удалить (влево)",
+        feature7: "Контекстное меню на десктопе (ПКМ)",
+        feature8: "Полноэкранный просмотр изображений, GIF, видео и аватаров",
+        feature9: "Превью ссылок",
+        feature10: "Анимация \"печатает...\" в стиле Матрицы",
+        feature11: "Работает как PWA и поддерживает Telegram WebView и мобильные браузеры",
+        feature12: "Интеграция криптокошельков (не только MetaMask), быстрая настройка и переключение",
+        feature13: "Симметричный ключ шифрования AES формируется уникально по ID чата — шифрование и расшифровка только на клиенте",
+        feature14: "Сервер хранит только зашифрованные данные, не имея доступа к ключам и открытому тексту",
+        startTitle: "🧭 Как начать:",
+        start1: "Создайте свой уникальный ID",
+        start2: "Добавьте ID собеседника и начните безопасное общение",
+        start3: "Пользуйтесь зашифрованными звонками, голосовыми фильтрами и передачей больших файлов",
+        philosophyTitle: "🧠 Философия:",
+        philosophy: "Никаких посредников. Только вы, ваш контакт и защищённый канал. Без отслеживания и мусора. Абсолютная конфиденциальность и свобода общения."
+      },
+      de: {
+    title: "🛡 Freiheit Messenger",
+    subtitle: "Keine Überwachung. Kein Spam. Keine Kontrolle.",
+    intro: "Erstellt für diejenigen, die Kommunikationsfreiheit und Privatsphäre schätzen. Kein Spam, keine Telefonnummernbindung, kein externer Zugriff auf Ihre Nachrichten.",
+    featuresTitle: "⚙ Funktionen:",
+    feature1: "Auf der Client-Seite (CryptoJS), ohne Schlüsselübertragung",
+    feature2: "Ende-zu-Ende-Verschlüsselung für alle Daten: Nachrichten, Anrufe, Medien, Dateien",
+    feature3: "Sprachanrufe mit Echtzeit-Audiofiltern, jeder Nutzer hört den einzigartigen Filter seines Kontakts",
+    feature4: "Nachrichtenantworten, Zitate und Löschung einzelner Nachrichten oder ganzer Chats (inklusive auf dem Gerät des Kontakts)",
+    feature5: "Dateiversand bis zu 10 GB ohne Kompression",
+    feature6: "Wischgesten auf Mobilgeräten: Antworten (nach rechts), Löschen (nach links) für Nachrichten; Umbenennen (nach rechts), Löschen (nach links) für Chats",
+    feature7: "Kontextmenü-Unterstützung auf Desktop (Rechtsklick)",
+    feature8: "Vollbildanzeige von Bildern, GIFs, Videos und Avataren",
+    feature9: "Linkvorschauen",
+    feature10: "\"Tippen\"-Animation im Matrix-Stil",
+    feature11: "Funktioniert als PWA und unterstützt Telegram WebView und mobile Browser",
+    feature12: "Integration von Kryptowallets (nicht nur MetaMask), einfache Hinzufügung und schnelles Umschalten",
+    feature13: "Symmetrischer AES-Verschlüsselungsschlüssel, der für jede Chat-ID einzigartig ist — Verschlüsselung und Entschlüsselung finden nur clientseitig statt",
+    feature14: "Server speichert nur verschlüsselte Daten, ohne Zugriff auf Schlüssel oder Klartext",
+    startTitle: "🧭 Wie starten:",
+    start1: "Erstellen Sie Ihre einzigartige Benutzer-ID",
+    start2: "Fügen Sie die ID Ihres Kontakts hinzu und starten Sie eine sichere Kommunikation",
+    start3: "Genießen Sie verschlüsselte Anrufe, personalisierte Audiofilter und das Teilen großer Dateien",
+    philosophyTitle: "🧠 Philosophie:",
+    philosophy: "Keine Mittelsmänner. Nur Sie, Ihr Kontakt und ein sicherer Kanal. Kein Tracking, kein Spam. Absolute Privatsphäre und Kommunikationsfreiheit."
+  },
+
+  fr: {
+    title: "🛡 Messager de Liberté",
+    subtitle: "Pas de surveillance. Pas de spam. Pas de contrôle.",
+    intro: "Créé pour ceux qui valorisent la liberté de communication et la confidentialité. Pas de spam, pas de numéro de téléphone lié, pas d'accès externe à vos messages.",
+    featuresTitle: "⚙ Fonctionnalités :",
+    feature1: "Côté client (CryptoJS), sans transmission de clé",
+    feature2: "Chiffrement de bout en bout pour toutes les données : messages, appels, médias, fichiers",
+    feature3: "Appels vocaux avec filtres audio en temps réel, chaque utilisateur entend le filtre unique de ses contacts",
+    feature4: "Réponses, citations et suppression des messages individuels ou des discussions entières (y compris sur l'appareil du contact)",
+    feature5: "Envoi de fichiers jusqu'à 10 Go sans compression",
+    feature6: "Gestes de balayage sur mobile : répondre (glisser à droite), supprimer (glisser à gauche) pour les messages ; renommer (glisser à droite), supprimer (glisser à gauche) pour les discussions",
+    feature7: "Support du menu contextuel sur ordinateur (clic droit)",
+    feature8: "Affichage en plein écran des images, GIF, vidéos et avatars",
+    feature9: "Aperçus des liens",
+    feature10: "Animation de « tapez... » style Matrix",
+    feature11: "Fonctionne comme une PWA et prend en charge Telegram WebView et les navigateurs mobiles",
+    feature12: "Intégration de portefeuilles crypto (pas seulement MetaMask), ajout facile et changement rapide",
+    feature13: "Clé de chiffrement AES symétrique dérivée de manière unique par ID de chat — chiffrement/déchiffrement uniquement côté client",
+    feature14: "Le serveur ne stocke que des données chiffrées, sans accès aux clés ou au texte en clair",
+    startTitle: "🧭 Comment démarrer :",
+    start1: "Créez votre identifiant utilisateur unique",
+    start2: "Ajoutez l'ID de votre contact et commencez à chatter en toute sécurité",
+    start3: "Profitez des appels chiffrés, des filtres audio personnalisés et du partage de gros fichiers",
+    philosophyTitle: "🧠 Philosophie :",
+    philosophy: "Pas d'intermédiaires. Juste vous, votre contact et un canal sécurisé. Pas de suivi, pas de spam. Confidentialité absolue et liberté de communication."
+  },
+
+  es: {
+    title: "🛡 Mensajero de Libertad",
+    subtitle: "Sin vigilancia. Sin spam. Sin control.",
+    intro: "Creado para quienes valoran la libertad de comunicación y la privacidad. Sin spam, sin vinculación a número telefónico, sin acceso externo a tus mensajes.",
+    featuresTitle: "⚙ Características:",
+    feature1: "En el lado del cliente (CryptoJS), sin transmisión de claves",
+    feature2: "Encriptación de extremo a extremo para todos los datos: mensajes, llamadas, medios, archivos",
+    feature3: "Llamadas de voz con filtros de audio en tiempo real, el filtro de cada usuario es único y audible para sus contactos",
+    feature4: "Respuestas a mensajes, citas y eliminación de mensajes individuales o chats enteros (incluido en el dispositivo del contacto)",
+    feature5: "Envío de archivos hasta 10 GB sin compresión",
+    feature6: "Gestos de deslizamiento en móvil: responder (deslizar a la derecha), eliminar (deslizar a la izquierda) para mensajes; renombrar (deslizar a la derecha), eliminar (deslizar a la izquierda) para chats",
+    feature7: "Soporte de menú contextual en escritorio (clic derecho)",
+    feature8: "Visualización en pantalla completa de imágenes, GIFs, videos y avatares",
+    feature9: "Previsualización de enlaces",
+    feature10: "Animación de “escribiendo” al estilo Matrix",
+    feature11: "Funciona como PWA y soporta Telegram WebView y navegadores móviles",
+    feature12: "Integración de billetera cripto (no solo MetaMask), fácil adición y cambio rápido",
+    feature13: "Clave de cifrado AES simétrica derivada de forma única por ID de chat — cifrado y descifrado solo en el cliente",
+    feature14: "El servidor solo almacena datos cifrados, sin acceso a claves ni texto plano",
+    startTitle: "🧭 Cómo empezar:",
+    start1: "Crea tu ID de usuario único",
+    start2: "Añade el ID de tu contacto y comienza a chatear de forma segura",
+    start3: "Disfruta de llamadas cifradas, filtros de voz personalizados y compartir archivos grandes",
+    philosophyTitle: "🧠 Filosofía:",
+    philosophy: "Sin intermediarios. Solo tú, tu contacto y un canal seguro. Sin rastreo, sin basura. Privacidad absoluta y libertad de comunicación."
+  },
+
+  ar: {
+    title: "🛡 رسول الحرية",
+    subtitle: "لا مراقبة. لا رسائل مزعجة. لا تحكم.",
+    intro: "مُصمم لمن يقدّر حرية التواصل والخصوصية. لا رسائل مزعجة، لا ربط برقم الهاتف، لا وصول خارجي لرسائلك.",
+    featuresTitle: "⚙ الميزات:",
+    feature1: "تشفير AES على جانب العميل (CryptoJS) بدون نقل المفتاح",
+    feature2: "تشفير من الطرف إلى الطرف لجميع البيانات: الرسائل، المكالمات، الوسائط، الملفات",
+    feature3: "مكالمات صوتية مع فلاتر صوت في الوقت الحقيقي، لكل مستخدم فلتر فريد يسمعه متواصلوه",
+    feature4: "الردود، الاقتباسات وحذف الرسائل أو المحادثات بالكامل (بما في ذلك حذفها من جهاز المتواصل)",
+    feature5: "إرسال ملفات حتى 10 جيجابايت بدون ضغط",
+    feature6: "الإيماءات السحب على الجوال: الرد (سحب لليمين)، الحذف (سحب لليسار) للرسائل؛ إعادة التسمية (سحب لليمين)، الحذف (سحب لليسار) للمحادثات",
+    feature7: "دعم قائمة السياق على سطح المكتب (النقر الأيمن)",
+    feature8: "عرض ملء الشاشة للصور، ملفات GIF، الفيديو والصور الرمزية",
+    feature9: "معاينة الروابط",
+    feature10: "رسوم متحركة \"الكتابة\" بأسلوب المصفوفة",
+    feature11: "يعمل كتطبيق PWA ويدعم Telegram WebView ومتصفحات الجوال",
+    feature12: "دمج محافظ العملات الرقمية (ليس فقط MetaMask) مع الإضافة السهلة والتبديل السريع",
+    feature13: "مفتاح تشفير AES متناظر يتم اشتقاقه بشكل فريد لكل معرف دردشة — التشفير وفك التشفير يتمان فقط على الجانب العميل",
+    feature14: "الخادم يخزن فقط البيانات المشفرة ولا يصل إلى المفاتيح أو النصوص الواضحة",
+    startTitle: "🧭 كيفية البدء:",
+    start1: "أنشئ معرف مستخدم فريد خاص بك",
+    start2: "أضف معرف جهة الاتصال وابدأ الدردشة بأمان",
+    start3: "استمتع بالمكالمات المشفرة، الفلاتر الصوتية المخصصة، ومشاركة الملفات الكبيرة",
+    philosophyTitle: "🧠 الفلسفة:",
+    philosophy: "لا وسطاء. فقط أنت، جهة اتصالك وقناة آمنة. لا تتبع، لا نفايات. خصوصية مطلقة وحريّة في التواصل."
+  },
+
+  zh: {
+    title: "🛡 自由信使",
+    subtitle: "无监控。无垃圾信息。无控制。",
+    intro: "为重视通信自由和隐私的人创建。无垃圾信息，无电话号码绑定，无外部访问您的消息。",
+    featuresTitle: "⚙ 功能：",
+    feature1: "客户端加密（CryptoJS），无需密钥传输",
+    feature2: "所有数据端到端加密：消息、通话、多媒体、文件",
+    feature3: "语音通话带实时音频滤镜，每个用户的滤镜对联系人独特且可听见",
+    feature4: "消息回复、引用和删除单条消息或整个聊天（包括删除联系人设备上的内容）",
+    feature5: "支持最高10GB文件传输，无需压缩",
+    feature6: "移动端滑动操作：消息右滑回复，左滑删除；聊天右滑重命名，左滑删除",
+    feature7: "桌面右键菜单支持",
+    feature8: "全屏查看图片、GIF、视频和头像",
+    feature9: "链接预览",
+    feature10: "Matrix风格“正在输入”动画",
+    feature11: "作为PWA工作，支持Telegram WebView和移动浏览器",
+    feature12: "加密钱包集成（不限于MetaMask），轻松添加和快速切换",
+    feature13: "对称AES加密密钥按聊天ID唯一生成——加密和解密仅在客户端完成",
+    feature14: "服务器仅存储加密数据，不访问密钥或明文",
+    startTitle: "🧭 开始使用：",
+    start1: "创建唯一用户ID",
+    start2: "添加联系人ID，开始安全聊天",
+    start3: "享受加密通话、个性化语音滤镜和大文件共享",
+    philosophyTitle: "🧠 哲学：",
+    philosophy: "无中间人。只有您、您的联系人和安全通道。无追踪，无垃圾。绝对隐私和通信自由。"
+  },
+
+  ko: {
+    title: "🛡 자유 메신저",
+    subtitle: "감시 없음. 스팸 없음. 통제 없음.",
+    intro: "통신의 자유와 프라이버시를 중시하는 사람들을 위해 만들어졌습니다. 스팸 없음, 전화번호 연결 없음, 메시지에 대한 외부 접근 없음.",
+    featuresTitle: "⚙ 기능:",
+    feature1: "클라이언트 측 AES 암호화(CryptoJS), 키 전송 없음",
+    feature2: "모든 데이터에 대한 종단 간 암호화: 메시지, 통화, 미디어, 파일",
+    feature3: "실시간 오디오 필터가 적용된 음성 통화, 각 사용자의 필터는 고유하며 연락처에서 들을 수 있음",
+    feature4: "메시지 답장, 인용 및 개별 메시지 또는 전체 채팅 삭제(연락처 장치에서도 삭제 포함)",
+    feature5: "10GB까지 파일 전송 압축 없이 지원",
+    feature6: "모바일에서 스와이프: 메시지에 대해 오른쪽 스와이프는 답장, 왼쪽 스와이프는 삭제; 채팅에 대해 오른쪽 스와이프는 이름 변경, 왼쪽 스와이프는 삭제",
+    feature7: "데스크톱에서 컨텍스트 메뉴 지원(오른쪽 클릭)",
+    feature8: "이미지, GIF, 비디오 및 아바타 전체 화면 보기",
+    feature9: "링크 미리보기",
+    feature10: "매트릭스 스타일의 ‘입력 중’ 애니메이션",
+    feature11: "PWA로 작동하며 Telegram WebView 및 모바일 브라우저 지원",
+    feature12: "MetaMask뿐만 아니라 다양한 암호화 지갑 통합, 손쉬운 추가 및 빠른 전환",
+    feature13: "채팅 ID별로 고유하게 생성되는 대칭 AES 암호화 키 — 클라이언트 측에서만 암호화 및 복호화 진행",
+    feature14: "서버는 암호화된 데이터만 저장하며 키나 평문에 접근하지 않음",
+    startTitle: "🧭 시작 방법:",
+    start1: "고유한 사용자 ID 생성",
+    start2: "연락처 ID를 추가하고 안전하게 채팅 시작",
+    start3: "암호화된 통화, 개인화된 음성 필터, 대용량 파일 공유를 즐기세요",
+    philosophyTitle: "🧠 철학:",
+    philosophy: "중개인 없음. 오직 당신, 연락처, 그리고 안전한 채널. 추적 없음, 쓰레기 없음. 절대적인 프라이버시와 통신의 자유."
+  },
+
+  ja: {
+    title: "🛡 フリーダムメッセンジャー",
+    subtitle: "監視なし。スパムなし。管理なし。",
+    intro: "通信の自由とプライバシーを重視する人のために作成されました。スパムなし、電話番号の紐付けなし、メッセージへの外部アクセスなし。",
+    featuresTitle: "⚙ 機能：",
+    feature1: "クライアント側（CryptoJS）でのAES暗号化、キーの送信なし",
+    feature2: "すべてのデータのエンドツーエンド暗号化：メッセージ、通話、メディア、ファイル",
+    feature3: "リアルタイムオーディオフィルター付きの音声通話、各ユーザーのフィルターはユニークで連絡先に聞こえる",
+    feature4: "メッセージの返信、引用、個別メッセージやチャット全体の削除（連絡先のデバイスからの削除も含む）",
+    feature5: "圧縮なしで最大10GBのファイル送信をサポート",
+    feature6: "モバイルでのスワイプ操作：メッセージは右スワイプで返信、左スワイプで削除；チャットは右スワイプで名前変更、左スワイプで削除",
+    feature7: "デスクトップでのコンテキストメニューサポート（右クリック）",
+    feature8: "画像、GIF、動画、アバターの全画面表示",
+    feature9: "リンクプレビュー",
+    feature10: "マトリックス風の「入力中」アニメーション",
+    feature11: "PWAとして動作し、Telegram WebViewやモバイルブラウザをサポート",
+    feature12: "MetaMaskに限らない暗号ウォレットの統合、簡単な追加と高速切り替え",
+    feature13: "チャットIDごとに一意に導出される対称AES暗号キー—暗号化と復号はクライアント側のみで行われる",
+    feature14: "サーバーは暗号化データのみを保存し、キーやプレーンテキストにはアクセスしない",
+    startTitle: "🧭 始め方：",
+    start1: "ユニークなユーザーIDを作成",
+    start2: "連絡先のIDを追加し、安全にチャットを開始",
+    start3: "暗号化通話、パーソナライズされた音声フィルター、大容量ファイル共有を楽しむ",
+    philosophyTitle: "🧠 フィロソフィー：",
+    philosophy: "仲介者なし。あなたと連絡先、安全なチャネルのみ。追跡なし、迷惑なし。絶対的なプライバシーと通信の自由。"
+  }
+    };
+
+    function applyTranslations(lang) {
+      const dict = translations[lang] || translations['en'];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+    }
+
+const supportedLanguages = ['ru', 'en', 'de', 'fr', 'es', 'ar', 'zh', 'ko', 'ja'];
+
+window.onload = () => {
+  const browserLang = navigator.language.slice(0, 2);
+  const selectedLang = supportedLanguages.includes(browserLang) ? browserLang : 'en';
+  applyTranslations(selectedLang);
+};
+  </script>
 </body>
 </html>
