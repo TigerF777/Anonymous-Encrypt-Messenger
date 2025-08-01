@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freedom Messenger</title>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #e6edf3;
+      --accent: #00ffa2;
+      --gray: #8b949e;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header h2 {
+      font-weight: 400;
+      color: var(--gray);
+    }
+
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h3 {
+      color: var(--accent);
+      margin-top: 2rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .install-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--accent);
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+
+    .install-button:hover {
+      background-color: #00e68c;
+    }
+
+    .qr-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .qr-wrapper {
+      position: relative;
+      width: 180px;
+      height: 180px;
+    }
+
+    .qr-wrapper img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+
+    .qr-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 255, 162, 0.85);
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(0, 255, 162, 0.8);
+      pointer-events: auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .qr-button:hover {
+      background-color: rgba(0, 255, 162, 1);
+    }
+
+    .qr-button svg {
+      width: 24px;
+      height: 24px;
+      fill: #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🛡 Freedom Messenger</h1>
+    <h2>No surveillance. No spam. No control.</h2>
+  </header>
+
+  <section>
+    <p>Created for those who value freedom of communication and privacy. No spam, no phone number link, no external access to your messages. Just you and your contact.</p>
+
+    <h3>⚙ Features:</h3>
+    <ul>
+      <li><span class="highlight">AES encryption</span> on the client side (CryptoJS), without key transmission</li>
+      <li>End-to-end encryption for all data: messages, calls, media, files</li>
+      <li>Voice calls with <span class="highlight">real-time audio filters</span>, each user’s filter is unique and heard by their contacts</li>
+      <li>Message replies, quotes, and deletion of individual messages and entire chats (including deleting from contact’s device)</li>
+      <li>File sending up to <span class="highlight">10 GB</span> without compression</li>
+      <li>Swipes on mobile: reply (right swipe), delete (left swipe) for messages; rename (right swipe), delete (left swipe) for chats</li>
+      <li>Context menu support on desktop (right-click)</li>
+      <li>Fullscreen viewing of images, GIFs, videos, and avatars</li>
+      <li>Link previews</li>
+      <li>"Typing" animation styled like the Matrix</li>
+      <li>Works as a PWA and supports Telegram WebView and mobile browsers</li>
+      <li>Crypto wallet integration (not limited to MetaMask), with easy adding and fast switching</li>
+      <li>Symmetric AES encryption key derived uniquely per chat ID — encryption and decryption happen client-side only</li>
+      <li>Server stores only encrypted data, never access to keys or plaintext</li>
+    </ul>
+
+    <h3>🧭 How to Start:</h3>
+    <ul>
+      <li>Create your unique user ID</li>
+      <li>Add your contact's ID and start chatting securely</li>
+      <li>Enjoy encrypted calls, personalized voice filters, and large file sharing</li>
+    </ul>
+
+    <h3>🧠 Philosophy:</h3>
+    <p><em>No middlemen. Just you, your contact, and a secure channel. No tracking, no junk. Absolute privacy and freedom of communication.</em></p>
+
+    <div class="qr-container">
+      <div class="qr-wrapper">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://crazyencrypt-f7c5f.web.app/&size=180x180" alt="App QR">
+        <a href="https://crazyencrypt-f7c5f.web.app/" target="_blank" class="qr-button" title="Install App">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="#000" d="M17 1H7C5.9 1 5 1.9 5 3v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="qr-wrapper">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://t.me/+BEFenwaKJl0zMTIy&size=180x180" alt="Telegram QR">
+        <a href="https://t.me/+BEFenwaKJl0zMTIy" target="_blank" class="qr-button" title="Join Telegram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="#000" d="M12 0C5.375 0 0 5.373 0 12c0 6.627 5.375 12 12 12s12-5.373 12-12c0-6.627-5.375-12-12-12zm5.586 7.926l-1.949 9.193c-.147.662-.532.822-1.079.511l-2.984-2.201-1.438 1.385c-.159.16-.292.292-.596.292l.213-3.031 5.523-4.984c.24-.213-.053-.332-.373-.119l-6.823 4.293-2.937-.917c-.638-.2-.651-.638.133-.942l11.48-4.424c.534-.2 1.002.119.829.931z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </section>
+</body>
+</html>
