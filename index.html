@@ -124,6 +124,32 @@
       height: 24px;
       fill: #000;
     }
+       @keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 12px rgba(0, 255, 162, 0.8);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 16px rgba(0, 255, 162, 1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 12px rgba(0, 255, 162, 0.8);
+  }
+}
+
+.qr-button {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .qr-icon {
+    width: 24px;
+    height: 24px;
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+}
   </style>
 </head>
 <body>
@@ -474,6 +500,7 @@ window.onload = () => {
         async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
+
 
 
 
